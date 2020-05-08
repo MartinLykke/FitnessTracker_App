@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <EditText
-        android:id="@+id/benchReps"
+        android:id="@+id/amountOfRepsBench"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -55,10 +55,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewSquat"
-        app:layout_constraintTop_toBottomOf="@+id/benchPressSubmit" />
+        app:layout_constraintTop_toBottomOf="@+id/benchpressSubmit" />
 
     <EditText
-        android:id="@+id/squatReps"
+        android:id="@+id/amountOfRepsSquat"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -97,18 +97,19 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/benchPressSubmit"
+        android:id="@+id/benchpressSubmit"
         android:layout_width="0dp"
         android:layout_height="51dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="test"
         android:text="@string/enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewBench"
-        app:layout_constraintTop_toBottomOf="@+id/benchReps" />
+        app:layout_constraintTop_toBottomOf="@+id/amountOfRepsBench" />
 
     <ImageView
         android:id="@+id/imageViewSquat"
@@ -146,6 +147,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewSquat"
-        app:layout_constraintTop_toBottomOf="@+id/squatReps" />
+        app:layout_constraintTop_toBottomOf="@+id/amountOfRepsSquat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

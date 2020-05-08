@@ -15,14 +15,17 @@ public class workoutsView extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+  public static ArrayList<WorkoutsItems> workoutsList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workouts_view);
 
-        ArrayList<WorkoutsItems> workoutsList = new ArrayList<>();
-        workoutsList.add(new WorkoutsItems(R.drawable.bench_press, "90 kg", "1 Rep"));
-        workoutsList.add(new WorkoutsItems(R.drawable.squat, "50 kg", "10 Reps"));
+
+       // workoutsList.add(new WorkoutsItems(R.drawable.bench_press, "0 kg", "0 Rep"));
+
+
+
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -42,5 +45,10 @@ public class workoutsView extends AppCompatActivity {
 
             }
         });
+
+    }
+    public void addWorkout(String kg, String reps){
+
+        workoutsList.add(new WorkoutsItems(R.drawable.squat, kg, reps));
     }
 }
