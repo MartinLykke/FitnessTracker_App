@@ -17,7 +17,7 @@
         ></androidx.recyclerview.widget.RecyclerView>
 
     <Button
-        android:id="@+id/addWorkoutButton"
+        android:id="@+id/addNewWorkoutButton"
         android:layout_width="match_parent"
         android:layout_height="73dp"
         android:layout_alignParentStart="true"

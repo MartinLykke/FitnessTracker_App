@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), workoutsView.class);
-                startIntent.putExtra("com.example.quicklauncher.something","hello world");
                 startActivity(startIntent);
 
             }
