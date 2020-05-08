@@ -21,11 +21,7 @@ public class workoutsView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workouts_view);
 
-
        // workoutsList.add(new WorkoutsItems(R.drawable.bench_press, "0 kg", "0 Rep"));
-
-
-
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -34,6 +30,8 @@ public class workoutsView extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+
+        mAdapter.notifyDataSetChanged();
 
 
         Button addNewWorkoutBtn = (Button)findViewById(R.id.addNewWorkoutButton);
@@ -45,10 +43,22 @@ public class workoutsView extends AppCompatActivity {
 
             }
         });
+        Button clearWorkoutsBtn = (Button)findViewById(R.id.clearWorkouts);
+        clearWorkoutsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                workoutsList.clear();
+                mAdapter.notifyDataSetChanged();
 
+            }
+        });
     }
-    public void addWorkout(String kg, String reps){
 
-        workoutsList.add(new WorkoutsItems(R.drawable.squat, kg, reps));
+    public void removeWorkout(View view){
+        //workoutsList.remove(1);
+        // TODO
     }
+
+
+
 }
