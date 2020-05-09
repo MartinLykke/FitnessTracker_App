@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,17 +22,19 @@ public class workoutsView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workouts_view);
 
+        // Adds back arrow
+       // getActionBar().setDisplayHomeAsUpEnabled(true);
        // workoutsList.add(new WorkoutsItems(R.drawable.bench_press, "0 kg", "0 Rep"));
 
+        // For the recyclerview
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mAdapter = new WorkoutsAdapter(workoutsList);
-
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter.notifyDataSetChanged();
+
 
 
         Button addNewWorkoutBtn = (Button)findViewById(R.id.addNewWorkoutButton);
